@@ -1,0 +1,55 @@
+name: Publish user guide
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Validate release tag
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          if [[ ! "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Release tag must use semver in the form vMAJOR.MINOR.PATCH (received: $RELEASE_TAG)"
+            exit 1
+          fi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install documentation dependencies
+        run: python -m pip install --upgrade pip mkdocs-material
+
+      - name: Build user guide
+        run: mkdocs build --strict --site-dir site
+
+      - name: Archive HTML output
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: tar -czf "posdoc-user-guide-${RELEASE_TAG}.tar.gz" -C site .
+
+      - name: Create or update GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+          ARCHIVE: posdoc-user-guide-${{ github.ref_name }}.tar.gz
+        run: |
+          if ! gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" \
+              --verify-tag \
+              --title "$RELEASE_TAG" \
+              --generate-notes
+          fi
+          gh release upload "$RELEASE_TAG" "$ARCHIVE" --clobber
