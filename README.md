@@ -1,15 +1,25 @@
-# posdoc
+# Rumbia POS User Guide
 
-This repository now includes end-user documentation built with **MkDocs Material**.
+Dokumentasi resmi **Rumbia POS** dibangun menggunakan **MkDocs Material** dan
+dapat diekspor sebagai HTML statis untuk distribusi web atau offline.
 
 ## Preview documentation locally
 
 ```bash
-pip install mkdocs-material
+python -m pip install -r requirements.txt
 mkdocs serve
 ```
 
 Then open `http://127.0.0.1:8000`.
+
+## Build HTML statis
+
+```bash
+mkdocs build
+```
+
+Perintah tersebut menghasilkan folder `site/` yang berisi seluruh halaman
+HTML, aset, dan search index.
 
 ## Publish a documentation release
 
