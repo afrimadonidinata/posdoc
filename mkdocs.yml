@@ -44,6 +44,9 @@ nav:
   - Beranda: index.md
   - Memulai & Hak Akses (RBAC):
       - Pengenalan Ekosistem: getting-started/overview.md
+      - Panduan Cepat (15 Menit): getting-started/quickstart.md
+      - Syarat Perangkat & Jaringan: getting-started/system-requirements.md
+      - Aktivasi Akun & PIN Kasir: getting-started/first-time-login.md
       - Matriks Peran Pengguna & RBAC: getting-started/user-roles-rbac.md
   - Web Portal (Back-Office):
       - Profil Bisnis & Pajak/PKP: back-office/store-profile-tax.md
