@@ -75,8 +75,3 @@ Pelajari gambaran umum ekosistem Rumbia POS dan cara memulai transaksi pertama A
     - [Penerimaan Barang & Stock Opname](back-office/inventory-management.md)
     - [Koneksi Printer Bluetooth & Scanner](hardware/printer-scanner.md)
     - [Panduan Mengatasi Kendala (FAQ)](support/troubleshooting-faq.md)
-mkdocs build
-```
-
-Folder `site/` berisi `index.html`, halaman-halaman HTML, aset CSS/JavaScript,
-dan search index yang siap didistribusikan melalui web server atau arsip.
