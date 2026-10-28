@@ -1,0 +1,6 @@
+site_name: posdoc User Guide
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - User Guide: user-guide.md
