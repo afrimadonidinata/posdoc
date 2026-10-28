@@ -2,9 +2,6 @@
 
 Selamat datang di pusat panduan resmi **Rumbia POS**, platform Point of Sale berbasis cloud untuk mengelola penjualan, inventaris, operasional cabang, dan laporan bisnis dari satu ekosistem terpadu.
 
-<!-- Slot Banner Hero Visual -->
-![Ekosistem Rumbia POS - Web Portal & Mobile Kasir](assets/images/hero-ecosystem-mockup.png)
-
 ---
 
 ## Solusi untuk 4 Vertikal Bisnis

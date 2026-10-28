@@ -1,5 +1,7 @@
 site_name: Rumbia POS - Panduan Pengguna & Dokumentasi Resmi
 site_description: Panduan lengkap operasional web portal dan aplikasi kasir Rumbia POS untuk Ritel, F&B, Jasa, dan Pendidikan.
+site_url: https://afrimadonidinata.github.io/posdoc/
+use_directory_urls: true
 
 theme:
   name: material
