@@ -1,6 +1,63 @@
-site_name: posdoc User Guide
+site_name: Rumbia POS - Panduan Pengguna & Dokumentasi Resmi
+site_description: Panduan lengkap operasional web portal dan aplikasi kasir Rumbia POS untuk Ritel, F&B, Jasa, dan Pendidikan.
+
 theme:
   name: material
+  language: id
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: emerald
+      toggle:
+        icon: material/weather-night
+        name: Gunakan mode gelap
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: emerald
+      toggle:
+        icon: material/weather-sunny
+        name: Gunakan mode terang
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+
 nav:
-  - Home: index.md
-  - User Guide: user-guide.md
+  - Beranda: index.md
+  - Memulai & Hak Akses (RBAC):
+      - Pengenalan Ekosistem: getting-started/overview.md
+      - Matriks Peran Pengguna & RBAC: getting-started/user-roles-rbac.md
+  - Web Portal (Back-Office):
+      - Profil Bisnis & Pajak/PKP: back-office/store-profile-tax.md
+      - Katalog Produk & Kategori: back-office/product-catalog.md
+      - Manajemen Inventaris & Gudang: back-office/inventory-management.md
+      - Laporan & Rekonsiliasi: back-office/reports-analytics.md
+  - Aplikasi Kasir (Mobile & Web):
+      - Pembukaan & Penutupan Shift: pos-operations/shift-management.md
+      - Transaksi & Pembayaran Digital: pos-operations/checkout-payments.md
+  - Panduan Vertikal Industri:
+      - Operasional Ritel: verticals/retail.md
+      - Operasional F&B & QR Self-Order: verticals/fnb-kds.md
+      - Layanan Jasa & Pendidikan: verticals/services-education.md
+  - Ekosistem & Integrasi:
+      - Toko Online (Storefront): integrations/commerce-storefront.md
+      - Integrasi Marketplace Omnichannel: integrations/omnichannel.md
+  - Perangkat & Bantuan:
+      - Setup Hardware Thermal Printer & Scanner: hardware/printer-scanner.md
+      - Troubleshooting & FAQ: support/troubleshooting-faq.md
