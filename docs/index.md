@@ -1,85 +1,80 @@
-# User Guide Rumbia POS
+# Panduan Pengguna Rumbia POS
 
-Selamat datang di dokumentasi resmi **Rumbia POS**, platform Point of Sale
-berbasis cloud untuk mengelola penjualan, inventaris, operasional cabang, dan
-laporan bisnis dari satu ekosistem.
+Selamat datang di pusat panduan resmi **Rumbia POS**, platform Point of Sale berbasis cloud untuk mengelola penjualan, inventaris, operasional cabang, dan laporan bisnis dari satu ekosistem terpadu.
 
-Rumbia POS dirancang untuk empat vertikal bisnis:
+<!-- Slot Banner Hero Visual -->
+![Ekosistem Rumbia POS - Web Portal & Mobile Kasir](assets/images/hero-ecosystem-mockup.png)
 
-- **Ritel**: barcode, varian ukuran/warna, retur, dan peringatan stok minimum.
-- **F&B**: denah meja, modifier, Kitchen Display System (KDS), bill splitting,
-  dan QR Self-Order.
-- **Jasa & Layanan**: penjualan item non-inventaris tanpa pencatatan stok fisik.
-- **Pendidikan/Pelatihan**: kuota batch kelas, pendaftaran siswa, dan bundling
-  kit materi fisik.
+---
 
-## Pahami ekosistemnya
+## Solusi untuk 4 Vertikal Bisnis
 
-Rumbia POS adalah **100% cloud-first**. Data transaksi dan stok disinkronkan
-secara real-time antar-cabang melalui koneksi internet. Tidak ada mode offline;
-pastikan perangkat memiliki koneksi yang stabil sebelum memulai operasional.
+Rumbia POS dirancang modular untuk menyesuaikan alur kerja industri Anda:
 
-| Area | Digunakan oleh | Fungsi utama |
-| --- | --- | --- |
-| [Web Portal](getting-started/overview.md) (`app.rumbia.id`) | Owner, Super Admin, Store Admin, Store Supervisor | Pengaturan bisnis, katalog, inventaris, integrasi, dan laporan |
-| Aplikasi Kasir (Mobile App/Web POS) | Cashier, Server/Waiter, Kitchen Staff, Sales Associate, Stock Staff | Shift, transaksi, pembayaran, pesanan, KDS, dan aktivitas stok |
-| Commerce Storefront | Pemilik bisnis dan pelanggan | Toko online dengan domain sendiri |
-| Omnichannel Marketplace | Pemilik bisnis dan tim operasional | Sinkronisasi TikTok Shop dan Blibli dengan pemotongan stok FIFO |
+- **Ritel**: Barcode scanner cepat, varian ukuran/warna, retur, dan peringatan stok minimum.
+- **F&B**: Denah meja dinamis, modifier menu, Kitchen Display System (KDS), split bill, dan QR Self-Order pelanggan.
+- **Jasa & Layanan**: Penjualan item non-inventaris tanpa pemotongan stok fisik.
+- **Pendidikan & Pelatihan**: Kuota batch kelas, pendaftaran siswa, dan bundling kit materi fisik.
 
-## Mulai dalam tiga langkah
+---
 
-1. **Siapkan akses** — Minta administrator mengundang Anda ke organisasi dan
-   menetapkan role sesuai tugas. Pelajari [matriks RBAC](getting-started/user-roles-rbac.md).
-2. **Konfigurasi bisnis** — Lengkapi profil usaha, pajak/PKP, cabang, katalog,
-   gudang, perangkat, serta integrasi yang diperlukan.
-3. **Jalankan operasional** — Buka shift, proses transaksi, rekonsiliasi,
-   tutup shift, lalu pantau laporan dari web portal.
+## Pahami Ekosistem Cloud Rumbia POS
 
-## Jalur baca berdasarkan peran
+Rumbia POS beroperasi secara **100% Cloud-First**. Seluruh transaksi, pergerakan stok antar-cabang, dan laporan keuangan disinkronkan secara real-time melalui internet.
 
-=== "Pemilik & Admin"
+!!! warning "Penting: Koneksi Internet Stabil Diperlukan"
+    Rumbia POS **tidak menggunakan sistem offline**. Pastikan perangkat kasir atau komputer Anda terhubung ke jaringan internet stabil sebelum memulai shift operasional.
 
-    Mulai dari [Pengenalan Ekosistem](getting-started/overview.md), lanjutkan
-    ke [Profil Bisnis](back-office/store-profile-tax.md), [Katalog](back-office/product-catalog.md),
-    dan [Laporan](back-office/reports-analytics.md).
+| Area Platform | Digunakan Oleh | Fungsi Utama |
+| :--- | :--- | :--- |
+| **[Web Portal](getting-started/overview.md)** (`app.rumbia.id`) | Owner, Super Admin, Store Admin, Store Supervisor | Konfigurasi bisnis, pajak/PKP, katalog produk master, inventaris gudang, dan rekonsiliasi laporan. |
+| **Aplikasi Kasir** (Mobile App / Web POS) | Cashier, Server/Waiter, Kitchen Staff, Sales Associate, Stock Staff | Pembukaan shift, transaksi cepat, cetak struk, pesanan meja, layar dapur KDS, dan mutasi stok fisik. |
+| **[Toko Online (Storefront)](integrations/commerce-storefront.md)** | Pemilik Usaha & Pelanggan | Website e-commerce mandiri otomatis dengan domain toko sendiri. |
+| **[Omnichannel Marketplace](integrations/omnichannel.md)** | Pemilik Usaha & Admin Toko | Sinkronisasi stok otomatis terpusat ke TikTok Shop dan Blibli. |
 
-=== "Kasir & Tim Toko"
+---
 
-    Pelajari [Pembukaan Shift](pos-operations/shift-management.md), lalu
-    [Transaksi dan Pembayaran](pos-operations/checkout-payments.md). Pilih
-    panduan [Ritel](verticals/retail.md) atau [F&B](verticals/fnb-kds.md)
-    sesuai jenis usaha.
+## Video Panduan Cepat (5 Menit)
 
-=== "Gudang & Operasional"
+Pelajari gambaran umum ekosistem Rumbia POS dan cara memulai transaksi pertama Anda:
 
-    Mulai dari [Manajemen Inventaris](back-office/inventory-management.md),
-    [setup perangkat](hardware/printer-scanner.md), dan
-    [troubleshooting](support/troubleshooting-faq.md).
+<div style="text-align: center; margin: 1.5rem 0;">
+  <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID" title="Rumbia POS Quickstart" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+</div>
 
-## Sifat dokumentasi ini
+---
 
-Situs ini dapat dibangun menjadi kumpulan file HTML statis yang dapat dibagikan
-melalui web server atau dibuka untuk distribusi offline. Fitur transaksi Rumbia
-POS sendiri tetap membutuhkan koneksi ke layanan cloud.
+## Mulai dalam Tiga Langkah Mudah
 
-!!! warning "Penting: Rumbia POS bukan aplikasi offline"
-    Ekspor HTML offline hanya berlaku untuk **membaca dokumentasi**. Transaksi,
-    sinkronisasi stok, pembayaran digital, dan integrasi marketplace tetap
-    memerlukan koneksi internet.
+1. **Siapkan Akun & Hak Akses** — Terima undangan email dari administrator dan kenali peran kerja Anda pada [Panduan Peran Pengguna & RBAC](getting-started/user-roles-rbac.md).
+2. **Konfigurasi Toko & Perangkat** — Lengkapi profil bisnis, pajak outlet, input katalog, dan hubungkan [Printer Thermal & Scanner](hardware/printer-scanner.md).
+3. **Buka Shift & Mulai Transaksi** — Jalankan kasir, proses pembayaran digital/tunai, cetak struk, dan pantau omzet dari web portal.
 
-## Perintah CLI dokumentasi
+---
 
-Instal dependensi dan jalankan server pratinjau:
+## Jalur Baca Cepat Berdasarkan Peran
 
-```bash
-python -m pip install -r requirements.txt
-mkdocs serve
-```
+=== "👑 Pemilik & Manajer Toko"
 
-Buka `http://127.0.0.1:8000`. Untuk menghasilkan HTML statis pada folder
-`site/`, jalankan:
+    Fokus pada tata kelola dan analitik:
+    - [Pengenalan Ekosistem & Navigasi](getting-started/overview.md)
+    - [Konfigurasi Bisnis & Pajak Outlet](back-office/store-profile-tax.md)
+    - [Katalog Produk & Paket Bundling](back-office/product-catalog.md)
+    - [Laporan Omzet & Rekonsiliasi Kas](back-office/reports-analytics.md)
 
-```bash
+=== "💳 Kasir & Tim Toko"
+
+    Fokus pada kecepatan transaksi meja kasir:
+    - [Panduan Buka & Tutup Shift Kasir](pos-operations/shift-management.md)
+    - [Alur Transaksi & Pembayaran QRIS/Tunai](pos-operations/checkout-payments.md)
+    - [Panduan Kasir Ritel](verticals/retail.md) atau [Panduan Kasir Resto/Kafe F&B](verticals/fnb-kds.md)
+
+=== "📦 Tim Gudang & Logistik"
+
+    Fokus pada arus barang dan stabilitas perangkat:
+    - [Penerimaan Barang & Stock Opname](back-office/inventory-management.md)
+    - [Koneksi Printer Bluetooth & Scanner](hardware/printer-scanner.md)
+    - [Panduan Mengatasi Kendala (FAQ)](support/troubleshooting-faq.md)
 mkdocs build
 ```
 
