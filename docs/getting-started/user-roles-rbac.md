@@ -54,11 +54,29 @@ Rumbia POS menyediakan beberapa peran bawaan yang dibagi ke dalam dua kelompok u
 
 ## Ilustrasi akses yang aman
 
-```text
-Akun User → Peran → Izin tertentu → Scope cabang
-   Kasir   → Cashier → transaksi, struk, shift → Cabang A
-   Admin   → Store Admin → produk, stok, laporan → Cabang A
-   Owner   → Owner → semua area → seluruh tenant
+Diagram berikut menunjukkan urutan evaluasi akses: identitas pengguna harus
+memiliki peran dan izin yang sesuai, lalu permintaan dibatasi lagi oleh scope
+cabang sebelum akses diberikan.
+
+```mermaid
+flowchart LR
+    U[Login pengguna] --> R{Peran aktif?}
+    R -->|Tidak| X[Akses ditolak]
+    R -->|Ya| P{Izin fitur sesuai?}
+    P -->|Tidak| X
+    P -->|Ya| S{Scope cabang sesuai?}
+    S -->|Tidak| X
+    S -->|Ya| G[Akses diberikan]
+
+    subgraph Contoh["Contoh scope"]
+        C[Cashier<br/>Transaksi & shift<br/>Cabang A]
+        A[Store Admin<br/>Produk & laporan<br/>Cabang A]
+        O[Owner<br/>Semua area<br/>Seluruh tenant]
+    end
+
+    C -.-> R
+    A -.-> R
+    O -.-> R
 ```
 
 !!! warning "Akses harus paling minimum"
