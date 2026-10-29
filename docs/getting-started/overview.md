@@ -16,11 +16,12 @@ Mulai dari sini untuk memahami bagaimana Rumbia POS bekerja sebagai satu ekosist
 
 Rumbia POS dibuat dengan model cloud-first: semua data utama disimpan dan diproses di satu sumber kebenaran (single source of truth) dan disinkronkan ke seluruh perangkat aktif.
 
-```text
-[Web Portal]  ──┐
-               ├──> [Rumbia POS Cloud Engine] ──> [Terminal Kasir]
-[Toko Online] ─┘                              │
-                                              └──> [KDS / Tablet / Marketplace]
+```mermaid
+flowchart LR
+    A[Web Portal] --> C[Rumbia POS Cloud Engine]
+    B[Toko Online] --> C
+    C --> D[Terminal Kasir]
+    C --> E[KDS / Tablet / Marketplace]
 ```
 
 !!! warning "Koneksi internet wajib"

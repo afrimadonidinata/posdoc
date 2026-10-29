@@ -33,21 +33,28 @@ theme:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - tables
   - attr_list
   - toc:
       permalink: true
 
+extra_javascript:
+  - javascripts/mermaid-init.js
+
 nav:
   - Beranda: index.md
-  - Memulai & Hak Akses (RBAC):
+  - Getting Started:
       - Pengenalan Ekosistem: getting-started/overview.md
       - Panduan Cepat (15 Menit): getting-started/quickstart.md
       - Syarat Perangkat & Jaringan: getting-started/system-requirements.md
       - Aktivasi Akun & PIN Kasir: getting-started/first-time-login.md
-      - Matriks Peran Pengguna & RBAC: getting-started/user-roles-rbac.md
+      - Peran Pengguna & RBAC: getting-started/user-roles-rbac.md
   - Web Portal (Back-Office):
       - Profil Bisnis & Pajak/PKP: back-office/store-profile-tax.md
       - Katalog Produk & Kategori: back-office/product-catalog.md
